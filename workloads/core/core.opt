@@ -6,9 +6,9 @@ WLD_RUN_FLAGS=$(RUN_FLAGS)
 #Override the command line flags such as number of iterations here (e.g. add -i100 to set iterations on this workload to 100)
 #For certification, you MUST use the BEST_CONCURRENCY flag to define -w and -c parameters for best performance.
 ifeq ($(CONCURRNCY),single)
-override WLD_CMD_FLAGS=-i8
+override WLD_CMD_FLAGS=
 else
-override WLD_CMD_FLAGS=-i8
+override WLD_CMD_FLAGS=
 endif
 
 #It is possible to change the parameters for best concurrency on a per workload basis.
