@@ -94,7 +94,7 @@ typedef e_s32 ee_s32;
 typedef e_f32 ee_f32;
 typedef e_u8 ee_u8;
 typedef e_u32 ee_u32;
-typedef ee_iptr_t ee_ptr_int;
+typedef long ee_ptr_int;
 typedef size_t ee_size_t;
 /* align_mem:
 	This macro is used to align an offset to point to a 32b value. It is used in the Matrix algorithm to initialize the input memory blocks.
