@@ -4,7 +4,7 @@ PLATFORM=linux64
 SHELL=/bin/bash
 
 ifndef TOOLCHAIN
-TOOLCHAIN=gcc64
+TOOLCHAIN=clang64
 endif
 
 # Flag: LOAD
