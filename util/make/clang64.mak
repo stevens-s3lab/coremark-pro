@@ -24,7 +24,7 @@ endif
 # SYSTEM ENVIRONMENT SECTION
 
 # Tools Root Directory
-TOOLS	= /usr/lib/llvm-11
+TOOLS	= /home/shan/llvm-12
 # For Solaris
 #TOOLS	= /usr/local
 # For Solaris
@@ -78,11 +78,12 @@ INCLUDE = $(TOOLS)/include
 # -O0			 Do not optimize
 # -O2			 Optimize for speed
 
-#ASAN_FLAGS=-fsanitize=address
+ASAN_FLAGS=-fsanitize=address
+DECOUPLE_FLAGS=-mllvm -asan-decouple
 COMPILER_FLAGS	= -g -O2 $(CDEFN)NDEBUG $(CDEFN)HOST_EXAMPLE_CODE=1 -std=gnu99
 COMPILER_NOOPT	= -O0 -g $(CDEFN)NDEBUG $(CDEFN)HOST_EXAMPLE_CODE=1 
 COMPILER_DEBUG	= -O0 -g $(CDEFN)HOST_EXAMPLE_CODE=1 -DBMDEBUG=1 -DTHDEBUG=1
-PACK_OPTS = $(ASAN_FLAGS)
+PACK_OPTS = $(ASAN_FLAGS) $(DECOUPLE_FLAGS)
 
 #Variable: CFLAGS 
 #	Options for the compiler.
